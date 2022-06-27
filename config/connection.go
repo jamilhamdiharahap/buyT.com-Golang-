@@ -27,7 +27,7 @@ func Connect() *gorm.DB {
 	db, err := gorm.Open(mysql.Open(connect), &gorm.Config{})
 
 	if err != nil {
-		log.Fatalln(err)
+		// log.Fatalln(err)
 	}
 	db.AutoMigrate(models.Kategori{}, models.Kereta{}, models.DetailKereta{}, models.Stasiun{}, models.Kota{}, models.User{}, models.Pemesanan{})
 	return db
