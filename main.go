@@ -50,7 +50,7 @@ func main() {
 		r.Post("/api/au2/login", auth.Login)
 	})
 
-	if err := http.ListenAndServe(":"+os.Getenv("HOST")+"", router); err != nil {
+	if err := http.ListenAndServe(":"+os.Getenv("PORT")+"", router); err != nil {
 		log.Fatal(err)
 	}
 	log.Println("Server Running on port 8001")
