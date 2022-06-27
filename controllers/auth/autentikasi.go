@@ -142,7 +142,7 @@ func PasswordValid(e string) bool {
 func Register(w http.ResponseWriter, r *http.Request) {
 	var user map[string]string
 	method := "POST"
-	baseUrl := " https://buytcomservicespemesanan.herokuapp.com/api/u1/user"
+	baseUrl := "https://buytcomservicespemesanan.herokuapp.com/api/u1/user"
 
 	err := json.NewDecoder(r.Body).Decode(&user)
 	if err != nil {

@@ -12,7 +12,7 @@ import (
 func (c *BaseController) GetServisPemesanan(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
 	method := "GET"
-	baseUrl := "http://localhost:8002/api/k4/detail/" + id
+	baseUrl := "https://buytcomservicespemesanan.herokuapp.com/api/k4/detail/" + id
 	header := map[string][]string{
 		"Content-type": {"application/json"},
 	}
