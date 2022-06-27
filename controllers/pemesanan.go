@@ -22,7 +22,7 @@ func init() {
 func (c *BaseController) Pemesanan(w http.ResponseWriter, r *http.Request) {
 	var pemesanan models.Pemesanan
 	method := "POST"
-	baseUrl := "http://localhost:8080/publish"
+	baseUrl := "https://buytnotifikasimessagebroker.herokuapp.com/publish"
 	err := json.NewDecoder(r.Body).Decode(&pemesanan)
 	if err != nil {
 		w.Write([]byte("Error Decode JSON Payload"))
