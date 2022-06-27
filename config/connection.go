@@ -1,7 +1,6 @@
 package config
 
 import (
-	"kereta/models"
 	"log"
 	"os"
 
@@ -29,6 +28,6 @@ func Connect() *gorm.DB {
 	if err != nil {
 		// log.Fatalln(err)
 	}
-	db.AutoMigrate(models.Kategori{}, models.Kereta{}, models.DetailKereta{}, models.Stasiun{}, models.Kota{}, models.User{}, models.Pemesanan{})
+	// db.AutoMigrate(models.Kategori{}, models.Kereta{}, models.DetailKereta{}, models.Stasiun{}, models.Kota{}, models.User{}, models.Pemesanan{})
 	return db
 }
